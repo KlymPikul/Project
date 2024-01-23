@@ -72,24 +72,27 @@ public class Task {
         }
     }
 
-   public int search(String fragment) {
+    public ArrayList<Integer> search(String fragment) {
+        ArrayList<Integer> findOfIndex = new ArrayList<>();
         try {
             ArrayList<String> rows = read();
 
             for (int i = 0; i < rows.size(); i++) {
                 if (rows.get(i).contains(fragment)) {
                     System.out.println("Фрагмент найден в строке с индексом: " + i);
-                    return i;
+                    findOfIndex.add(i);
                 }
             }
-            System.out.println("Фрагмент не найден в файле.");
-            return -1;
+            if (findOfIndex.isEmpty()) {
+                System.out.println("Фрагмент не найден в файле.");
+            }
         } catch (Exception e) {
             printError(e);
-            return -1;
         }
+        return findOfIndex;
     }
-
 }
+
+
 
 

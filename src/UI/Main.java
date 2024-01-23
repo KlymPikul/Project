@@ -1,7 +1,7 @@
 package UI;
 
 import DL.Task;
-
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Task task = new Task("src/data.txt");
@@ -12,7 +12,8 @@ public class Main {
         task.remove(1);
         System.out.println(task.read());
 
-        task.search("задача");
+        ArrayList<Integer> findOfIndex = task.search("задача");
+        System.out.println(findOfIndex);
 
 
 
