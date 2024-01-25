@@ -30,7 +30,7 @@ public class ConsoleUI {
                     removeTask();
                     break;
                 case 4:
-                    displayTaskCount();
+                    taskCount();
                     break;
                 case 0:
                     return;
@@ -65,8 +65,8 @@ public class ConsoleUI {
 
     }
 
-    private static void displayTaskCount() {
-        System.out.println(taskManager.length());
+    private static void taskCount(){
+        System.out.println("Количество задач: " + taskManager.length());
     }
 
 

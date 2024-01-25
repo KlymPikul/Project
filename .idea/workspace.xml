@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a67d11f-05cd-461d-87e2-f24e81abc9a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BL/TaskManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DL/DataHandlerByStrings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/ConsoleUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DL/DataHandlerByObjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BL/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BL/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DL/DataHandlerByStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DL/DataHandlerByStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DL/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DL/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ConsoleUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2bK4UMV9hvHvthkD3xz3TPejV1l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,7 +44,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/klimp/Java Project/Test38/Project",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Main">

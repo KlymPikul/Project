@@ -9,21 +9,84 @@ public class Task {
     private Priority priority;
 
     public Task(String title, Status status, int storyPoints, Priority priority) {
-        this.id = idCounter++;
+        this(idCounter++, title, status, storyPoints, priority);
+    }
+
+    public Task(int id, String title, Status status, int storyPoints, Priority priority) {
+        this.id = id;
         this.title = title;
         this.status = status;
         setStoryPoints(storyPoints);
         this.priority = priority;
     }
 
-
-    private void setStoryPoints(int v) {
-        // Проверяем сложность задачи
-        this.storyPoints = (v >= 1 && v <= 10) ? v : 10;
+    public void setStoryPoints(int v) {
+        this.storyPoints = (v >= 1 && v <= 10)? v : 10;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getCSV(){
+        return String.format("%d,%s,%s,%d,%s",
+                this.id,
+                this.title,
+                this.status,
+                this.storyPoints,
+                this.priority
+        );
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "№%d %s (сложность: %d приоритет: %s)",
+                this.id,
+                this.title,
+                this.storyPoints,
+                this.priority
+        );
+    }
 }
+
+
+
+    /* @Override
+    public String toString() {
+        return String.format(
+                "N%d %s (Статус: %s Сложность: %d приоритет: %s)",
+                this.id,
+                this.title,
+                this.status,
+                this.storyPoints,
+                this.priority
+        );
+    }
+
+     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 id - число
