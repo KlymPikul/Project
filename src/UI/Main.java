@@ -8,10 +8,12 @@ import DL.Task;
 import UI.ConsoleUI;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class Main {
     public static void main(String[] args) {
+        ConsoleUiForObjects.run();
 //        ConsoleUI.run();
 //        Task task = new Task("Написать программу", Status.NEW, 5, Priority.MEDIUM);
 //
@@ -20,7 +22,7 @@ public class Main {
         }
 
 
-            public static ArrayList<Task> getTasks () {
+           /* public static ArrayList<Task> getTasks () {
                 ArrayList<Task> tasks = new ArrayList<>();
                 tasks.add(new Task("1 Написать программу", Status.NEW, 5, Priority.MEDIUM));
                 tasks.add(new Task("2 Написать программу", Status.NEW, 5, Priority.MEDIUM));
@@ -33,6 +35,8 @@ public class Main {
                 tasks.add(new Task("4 Написать программу", Status.NEW, 5, Priority.MEDIUM));
                 return tasks;
             }
+
+            */
 
 
         }

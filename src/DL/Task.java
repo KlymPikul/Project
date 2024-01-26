@@ -28,6 +28,10 @@ public class Task {
         return id;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public String getCSV(){
         return String.format("%d,%s,%s,%d,%s",
                 this.id,
@@ -49,23 +53,6 @@ public class Task {
         );
     }
 }
-
-
-
-    /* @Override
-    public String toString() {
-        return String.format(
-                "N%d %s (Статус: %s Сложность: %d приоритет: %s)",
-                this.id,
-                this.title,
-                this.status,
-                this.storyPoints,
-                this.priority
-        );
-    }
-
-     */
-
 
 
 

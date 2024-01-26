@@ -1,13 +1,10 @@
 package DL;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
-import java.util.List;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
 
 
 public class DataHandlerByObjects {
@@ -33,9 +30,9 @@ public class DataHandlerByObjects {
                 Task task = new Task(
                         Integer.parseInt(props[0]),
                         props[1],
-                        Status.valueOf(props[2]),
+                        Status.get(props[2]),
                         Integer.parseInt(props[3]),
-                        Priority.valueOf(props[4])
+                        Priority.get(props[4])
                 );
                 result.add(task);
             }
@@ -54,13 +51,7 @@ public class DataHandlerByObjects {
                 .map(x -> x.getCSV())
                 .collect(Collectors.toList());
 
-        String resultString = String.join("\n", stringTasks);
-
-        try (FileWriter writer = new FileWriter(this.file)) {
-            writer.write(resultString);
-        } catch (IOException e) {
-            printError(e);
-        }
+        writeArrayToFile(stringTasks);
     }
 
     public void remove(int id) {
@@ -79,11 +70,28 @@ public class DataHandlerByObjects {
         }
     }
 
-    //     реализовать метод remove
-//    данный метод получает в качестве аргумента id задачи и удаляет ее из файла
-//    порядок выполнения
-//    1) считать все задачи в ArrayList<Task>
-//    2) сформировать новый List со всеми задачами, кроме удаляемой (добавить в Task getter  для id)
-//    3) получивщийся List преобразовать в контект для файла (множество строк с данными о задачах в формате CSV)
-//    4) записать данный контент в файл
+    private void writeArrayToFile(List<String> array) {
+        String resultString = String.join("\n", array);
+
+        try (FileWriter writer = new FileWriter(this.file)) {
+            writer.write(resultString);
+        } catch (IOException e) {
+            printError(e);
+        }
+    }
+
+    public int search(String substring) {
+        ArrayList<Task> tasks = read();
+        Optional<Task> result = tasks.stream()
+                .filter(x -> x.getTitle().contains(substring))
+                .findFirst();
+        if (!result.isEmpty()) {
+            return -1;
+        } else {
+            return result.get().getId();
+        }
+    }
+
+
 }
+

@@ -1,6 +1,7 @@
 package UI;
 
 import BL.TaskManager;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -42,27 +43,25 @@ public class ConsoleUI {
     }
     private static void displayTasks() {
         ArrayList<String> tasks = taskManager.getTasks();
-        //System.out.println("Список задач:");
         for (String task : tasks) {
             System.out.println(task);
         }
     }
 
-    private static void addTask() {
+    private static void addTask(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Укажите описание задачи:");
+        System.out.print("Укажите описание задачи: ");
         String description = scanner.nextLine();
         taskManager.addTask(description);
-        System.out.println("Задача добавлена успешно.");
+        System.out.println("Задача добавлена");
     }
 
-    private static void removeTask() {
+    private static void removeTask(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Укажите номер задачу для удаления:");
+        System.out.print("Укажите номер задачи: ");
         String number = scanner.nextLine();
         taskManager.removeTask(number);
-        System.out.println("Задача удалена успешно.");
-
+        System.out.println("Задача удалена");
     }
 
     private static void taskCount(){
